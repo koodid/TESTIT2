@@ -15,16 +15,23 @@ Tabelis formuleerituna on sisendiks:
 
 Programmil on kaks poolt: loomine ja täitmine.
 ## Testi loomisel:
-- ...
-- 
+- Testi läbiviija ehk looja sisestab võtmesõna (minimaalselt 3 tähemärki), millega tema test seostatakse.
+- Testi looja sisestab arvu, mis näitab kui suurt osa parimatest tulemustest (kõige rohkem ühtinud "profiilidest") selle testi puhul testi täitjale näidatakse.
+- Enne faili sisestamist kontrollib programm, kas kõik vajalikud väljad on nõuetekohaselt täidetud ning ega ei leidu juba samasuguse koodiga testi. Viimasel juhul tuleb sisestada uus kood.
+- Looja valib oma arvutist testi aluseks oleva tabeli.
+- Programm kontrollib, kas kõik vajalikud väljad on täidetud.
+- Kui programm ei leia info puudujääke, kuvatakse olulisem info (testi tutvustus, testi küsimused koos valikvastustega, testi tulemuste alternatiivid koos nende kohta käiva lisainfoga) loojale.
+- Sisestatud failist tehakse koopia, millelt käivitub hiljem testi täitmine.
+- Kui looja leiab, et kõik on sobiv, saab nupust "Valmis" programmi sulgeda. Kui millegipärast looja soovib kas testi muuta või selle loomisest loobuda, saab valida "Loobu ja kustuta", mis kustutab failist tehtud koopia (ja seega ka testi). Soovi korral saab kasutaja nüüd uue faili sisestada.
 
 ## Testi täitmisel:
-- Kuvab testi või küsitluse tutvustuse.
+- Testini jõudmiseks peab testi täitja sisestama kõigepealt testi loojalt saadud koodi või võtmesõna.
+- Programm kontrollib, kas sellise koodiga fail on olemas. Kui faili pole, teavitatakse täitjat vigasest koodist. Kui fail on olemas, liigub programm edasi.
+- ...
+- Kuvab täitjale testi või küsitluse tutvustuse.
 - Kuvab kõik tabelis olevad küsimused koos valikvastustega.
 - Salvestab kasutaja vastused.
 - Võrdleb kasutaja vastuseid iga alternatiivse tulemuse "profiiliga".
-- Võrdluse põhjal kuvab kasutajale kas:
-    - kõige parema või võrdselt parimad tulemused, mille puhul profiili(de) ja kasutaja vastused ühtisid kõige rohkem.
-    - eelnevalt programmis määratletud paremiku (nt. TOP 3, TOP 5 vmt) koos vastuste kattuvuse protsendiga.
+- Võrdluse põhjal kuvab kasutajale testi looja poolt määratud hulga tulemuste paremiku (nt. TOP 3, TOP 5 vmt) koos vastuste kattuvuse protsendiga.
 
 https://github.com/koodid/TESTIT2 
