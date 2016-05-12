@@ -27,7 +27,6 @@ Programmil on kaks poolt: loomine ja täitmine.
 ## Testi täitmisel:
 - Testini jõudmiseks peab testi täitja sisestama kõigepealt testi loojalt saadud koodi või võtmesõna.
 - Programm kontrollib, kas sellise koodiga fail on olemas. Kui faili pole, teavitatakse täitjat vigasest koodist. Kui fail on olemas, liigub programm edasi.
-- ...
 - Kuvab täitjale testi või küsitluse tutvustuse.
 - Kuvab kõik tabelis olevad küsimused koos valikvastustega.
 - Salvestab kasutaja vastused.
