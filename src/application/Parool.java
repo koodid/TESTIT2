@@ -14,6 +14,4 @@ public class Parool {
 	public void setParool(String parool) {
 		this.parool = parool;
 	}
-	
-	
 }

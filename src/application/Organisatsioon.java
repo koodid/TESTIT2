@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Organisatsioon {
 	private String organisatsioon;
 	private String orgLisainfo;
-	private ArrayList<Integer> valikVastused;
+	private ArrayList<String> valikVastused;
 	private ArrayList<Organisatsioon> organisatsioonid = new ArrayList<>();
 	
 	public String getOrganisatsioon() {
@@ -14,14 +14,13 @@ public class Organisatsioon {
 	public String getOrgLisainfo() {
 		return orgLisainfo;
 	}
-	public ArrayList<Integer> getValikVastused() {
+	public ArrayList<String> getValikVastused() {
 		return valikVastused;
 	}
 	public ArrayList<Organisatsioon> getOrganisatsioonid() {
 		return organisatsioonid;
 	}
-	public Organisatsioon(String organisatsioon, String orgLisainfo, ArrayList<Integer> valikVastused) {
-		super();
+	public Organisatsioon(String organisatsioon, String orgLisainfo, ArrayList<String> valikVastused) {
 		this.organisatsioon = organisatsioon;
 		this.orgLisainfo = orgLisainfo;
 		this.valikVastused = valikVastused;
@@ -45,10 +44,7 @@ public class Organisatsioon {
 			Organisatsioon uusOrg = new Organisatsioon(
 					org_nimi.loeLahter(), 
 					lisainfo.loeLahter(),
-					orgVastused.kodeeriVastused(
-							vastused,
-							orgVastused.loeNimekiriVeerust(fail, 4, veerg))
-					);
+					orgVastused.loeNimekiriVeerust(fail, 4, veerg));
 			organisatsioonid.add(uusOrg);
 			
 		}

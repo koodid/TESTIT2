@@ -14,5 +14,4 @@ public class Top {
 	public void setTopNr(int topNr) {
 		this.topNr = topNr;
 	}
-	
 }

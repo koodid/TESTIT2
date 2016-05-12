@@ -1,11 +1,9 @@
 package application;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class Vastaja {
-	private List<String> vastused;
-	public List<String> getVastused() {
+	private ArrayList<String> vastused;
+	public ArrayList<String> getVastused() {
 		return vastused;
 	}
 
@@ -16,6 +14,4 @@ public class Vastaja {
 	public void lisaVastus(String vastus) {
 		vastused.add(vastus);
 	}
-	
-	
 }

@@ -361,7 +361,7 @@ public class Main extends Application {
 						int indeks1 = failiteeTekstina.lastIndexOf("_");
 						int indeks2 = failiteeTekstina.lastIndexOf(".csv");
 						int topArv = Integer.parseInt(failiteeTekstina.substring(indeks1+1, indeks2));
-						System.out.println(topArv);
+						
 						// Testi andmete lugemine tabelist
 						try {
 							testiSisu = loeFail(failitee);
@@ -425,25 +425,24 @@ public class Main extends Application {
                             		int i1 = tulemusStr.indexOf("=");
                             		int i2 = tulemusStr.lastIndexOf(",");
                             		String tulemusTekstina = tulemusStr.substring(i1+1, i2);
-                            		System.out.println(tulemusTekstina);
                             		vastaja.lisaVastus(tulemusTekstina);
                             	}
                             	// Vastaja tulemuste võrdlemine vastuste profiilidega
+                            	ParimValik edetabel = new ParimValik(vastaja.getVastused(), testiSisu.getTulemused());
+                            	edetabel.valiParimEdetabel();
+                            	String testiTulemus = edetabel.kuvaTop(topArv);
                             	
-                            	
-                            	
+                            	TextArea tulemusteKuva = new TextArea(testiTulemus);
+                            	tulemusteKuva.setEditable(false);
+				        		tulemusteKuva.setWrapText(true);
+				        		tulemusteKuva.setMaxWidth(Double.MAX_VALUE);
+				        		tulemusteKuva.setMaxHeight(Double.MAX_VALUE);
+				        		
+				        		uusPiiripaan.setCenter(tulemusteKuva);
+				        		
                             }
                         });
-                        
-                        
-		        		
-                    	
-						
-						
-						
-						
-
-						
+                      
 					}				      
 				}
 			}
