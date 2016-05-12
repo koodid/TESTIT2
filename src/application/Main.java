@@ -4,8 +4,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -20,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -377,6 +376,10 @@ public class Main extends Application {
                     	paigutuskast.setPadding(new Insets(15, 15, 15, 15));
 		        		paigutuskast.setSpacing(24);
 		        		paigutuskast.setAlignment(Pos.CENTER);
+		        		HBox vastusteKast = new HBox();
+		        		vastusteKast.setPadding(new Insets(15, 15, 15, 15));
+		        		vastusteKast.setSpacing(24);
+		        		vastusteKast.setAlignment(Pos.CENTER);
 		        		
 		        		Text testiTutvustus = new Text(testiSisu.getTutvustusTekst());
 		        		testiTutvustus.setFont(Font.font ("Regular", 24));
@@ -393,6 +396,44 @@ public class Main extends Application {
 		        		Scene stseen3 = new Scene(uusPiiripaan, 800,500);
                         uusLava.setScene(stseen3);
                         uusLava.show();
+                        
+                        nuppTaitma.setOnAction(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent e) {
+                            	paigutuskast.getChildren().removeAll(
+                            			testiTutvustus,
+        		        				nuppTaitma);
+                            	// Küsimuste ja võimalike valikvastuste kuvamine
+                            	List<String> kysimused = testiSisu.getKysimusteList();
+                            	List<String> valikvastused = testiSisu.getValikvastusteList();
+                            	Vastaja vastaja = new Vastaja();
+                            	                            	
+                            	for(int i = 0; i < kysimused.size(); i++) {
+                            		Alert alert = new Alert(AlertType.CONFIRMATION);
+                            		alert.setTitle("TESTIT");
+                            		alert.setHeaderText(kysimused.get(i));
+                            		// alert.setContentText();
+                            		String[] valikud = valikvastused.get(i).split(",");
+                            		ButtonType[] nupud = new ButtonType[valikud.length];
+                            		for(int j = 0; j < valikud.length; j++) {
+                            			ButtonType uusnupp = new ButtonType(valikud[j].trim());
+                            			nupud[j] = uusnupp;
+                            		}
+                            		alert.getButtonTypes().setAll(nupud);
+                            		Optional<ButtonType> tulemus = alert.showAndWait();
+                            		String tulemusStr = tulemus.toString();
+                            		int i1 = tulemusStr.indexOf("=");
+                            		int i2 = tulemusStr.lastIndexOf(",");
+                            		String tulemusTekstina = tulemusStr.substring(i1+1, i2);
+                            		System.out.println(tulemusTekstina);
+                            		vastaja.lisaVastus(tulemusTekstina);
+                            	}
+                            	// Vastaja tulemuste võrdlemine vastuste profiilidega
+                            	
+                            	
+                            	
+                            }
+                        });
                         
                         
 		        		
