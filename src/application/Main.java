@@ -20,6 +20,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
@@ -432,13 +433,21 @@ public class Main extends Application {
                             	edetabel.valiParimEdetabel();
                             	String testiTulemus = edetabel.kuvaTop(topArv);
                             	
-                            	TextArea tulemusteKuva = new TextArea(testiTulemus);
-                            	tulemusteKuva.setEditable(false);
-				        		tulemusteKuva.setWrapText(true);
-				        		tulemusteKuva.setMaxWidth(Double.MAX_VALUE);
-				        		tulemusteKuva.setMaxHeight(Double.MAX_VALUE);
-				        		
-				        		uusPiiripaan.setCenter(tulemusteKuva);
+                            	VBox tulemusteKuva = new VBox();
+                            	tulemusteKuva.setPadding(new Insets(15, 15, 15, 15));
+                				tulemusteKuva.setSpacing(24);
+                            	Text pealkiri = new Text("Sinu testi tulemus:");
+                            	pealkiri.setFont(Font.font ("Regular", FontWeight.BOLD, 24));
+                            	Text tulemusteTekst = new Text(testiTulemus);
+                            	tulemusteTekst.setWrappingWidth(600);
+                            	tulemusteTekst.setFont(Font.font ("Regular", 16));
+                            	tulemusteKuva.getChildren().addAll(pealkiri,tulemusteTekst);
+                            	tulemusteKuva.setAlignment(Pos.CENTER);
+                           	
+				        		ScrollPane s1 = new ScrollPane(tulemusteKuva);
+				        		s1.setFitToHeight(true);
+				        		s1.setFitToWidth(true);
+				        		uusPiiripaan.setCenter(s1);
 				        		
                             }
                         });
