@@ -13,7 +13,9 @@ Tabelis formuleerituna on sisendiks:
 - Konkreetse tulemuse "õiged" vastused kõikidele küsimustele (kujuneb tulemuse "profiil").
 - Tulemus(t)e kuvamisel esitatav lisainfo kõikide tulemuste alternatiivide kohta.
 
-Programmil on kaks poolt: loomine ja täitmine.
+https://cloud.githubusercontent.com/assets/16835566/15314942/7197f4ae-1c1d-11e6-8c64-005bd2e7bfae.jpg
+
+Programmil on kaks poolt: testi loomine ja testi täitmine.
 ## Testi loomisel:
 - Testi läbiviija ehk looja sisestab võtmesõna (minimaalselt 3 tähemärki), millega tema test seostatakse.
 - Testi looja sisestab arvu, mis näitab kui suurt osa parimatest tulemustest (kõige rohkem ühtinud "profiilidest") selle testi puhul testi täitjale näidatakse.
@@ -23,6 +25,8 @@ Programmil on kaks poolt: loomine ja täitmine.
 - Kui programm ei leia info puudujääke, kuvatakse olulisem info (testi tutvustus, testi küsimused koos valikvastustega, testi tulemuste alternatiivid koos nende kohta käiva lisainfoga) loojale.
 - Sisestatud failist tehakse koopia, millelt käivitub hiljem testi täitmine.
 - Kui looja leiab, et kõik on sobiv, saab nupust "Valmis" programmi sulgeda. Kui millegipärast looja soovib kas testi muuta või selle loomisest loobuda, saab valida "Loobu ja kustuta", mis kustutab failist tehtud koopia (ja seega ka testi). Soovi korral saab kasutaja nüüd uue faili sisestada.
+
+TESTIT2/ReadmePildid/Testi_loomise_aken.jpg
 
 ## Testi täitmisel:
 - Testini jõudmiseks peab testi täitja sisestama kõigepealt testi loojalt saadud koodi või võtmesõna.
