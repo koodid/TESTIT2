@@ -26,7 +26,7 @@ Programmil on kaks poolt: testi loomine ja testi täitmine.
 - Sisestatud failist tehakse koopia, millelt käivitub hiljem testi täitmine.
 - Kui looja leiab, et kõik on sobiv, saab nupust "Valmis" programmi sulgeda. Kui millegipärast looja soovib kas testi muuta või selle loomisest loobuda, saab valida "Loobu ja kustuta", mis kustutab failist tehtud koopia (ja seega ka testi). Soovi korral saab kasutaja nüüd uue faili sisestada.
 
-[https://TESTIT2/ReadmePildid/Testi_loomise_aken.jpg]
+![testi_loomise_aken](https://cloud.githubusercontent.com/assets/16835566/15314944/742293b4-1c1d-11e6-808a-de13862df619.jpg)
 
 ## Testi täitmisel:
 - Testini jõudmiseks peab testi täitja sisestama kõigepealt testi loojalt saadud koodi või võtmesõna.
