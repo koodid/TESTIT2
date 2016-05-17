@@ -37,4 +37,9 @@ Programmil on kaks poolt: testi loomine ja testi täitmine.
 - Võrdleb kasutaja vastuseid iga alternatiivse tulemuse "profiiliga".
 - Võrdluse põhjal kuvab kasutajale testi looja poolt määratud hulga tulemuste paremiku (nt. TOP 3, TOP 5 vmt) koos vastuste kattuvuse protsendiga.
 
+![ligipaas](https://cloud.githubusercontent.com/assets/16835566/15315550/ef17a584-1c20-11e6-945a-8c3897b87e0b.jpg)
+![testi_tutvustus](https://cloud.githubusercontent.com/assets/16835566/15315552/f551cd26-1c20-11e6-969a-2851be578198.jpg)
+![kysimused](https://cloud.githubusercontent.com/assets/16835566/15315559/fba3fb0e-1c20-11e6-8343-4c672cf09dca.jpg)
+![tulemused](https://cloud.githubusercontent.com/assets/16835566/15315561/fedc037a-1c20-11e6-89c1-467dd4b14e2e.jpg)
+
 https://github.com/koodid/TESTIT2 
