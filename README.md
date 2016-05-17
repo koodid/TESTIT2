@@ -13,7 +13,7 @@ Tabelis formuleerituna on sisendiks:
 - Konkreetse tulemuse "õiged" vastused kõikidele küsimustele (kujuneb tulemuse "profiil").
 - Tulemus(t)e kuvamisel esitatav lisainfo kõikide tulemuste alternatiivide kohta.
 
-https://cloud.githubusercontent.com/assets/16835566/15314942/7197f4ae-1c1d-11e6-8c64-005bd2e7bfae.jpg
+[https://cloud.githubusercontent.com/assets/16835566/15314942/7197f4ae-1c1d-11e6-8c64-005bd2e7bfae.jpg9]
 
 Programmil on kaks poolt: testi loomine ja testi täitmine.
 ## Testi loomisel:
@@ -26,7 +26,7 @@ Programmil on kaks poolt: testi loomine ja testi täitmine.
 - Sisestatud failist tehakse koopia, millelt käivitub hiljem testi täitmine.
 - Kui looja leiab, et kõik on sobiv, saab nupust "Valmis" programmi sulgeda. Kui millegipärast looja soovib kas testi muuta või selle loomisest loobuda, saab valida "Loobu ja kustuta", mis kustutab failist tehtud koopia (ja seega ka testi). Soovi korral saab kasutaja nüüd uue faili sisestada.
 
-TESTIT2/ReadmePildid/Testi_loomise_aken.jpg
+[https://TESTIT2/ReadmePildid/Testi_loomise_aken.jpg]
 
 ## Testi täitmisel:
 - Testini jõudmiseks peab testi täitja sisestama kõigepealt testi loojalt saadud koodi või võtmesõna.
