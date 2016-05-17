@@ -128,7 +128,9 @@ public class Main extends Application {
 				infobox.setPadding(new Insets(15, 15, 15, 15));
 				infobox.setSpacing(24);
 				
-				Text loomiseInfo = new Text("Testi loomiseks täida allolevad lüngad ning lae üles testi aluseks olev csv fail.");
+				Text loomiseInfo = new Text();
+				String loomiseInfoTekst = "Testi loomiseks täida allolevad lüngad ning lae üles testi aluseks olev csv fail.";
+				loomiseInfo.setText(loomiseInfoTekst);
 				loomiseInfo.setFont(Font.font ("Regular", 18));
 				
 				// Vali kood, millega pääseb vastaja testile ligi.
@@ -233,6 +235,10 @@ public class Main extends Application {
 							String top = Integer.toString(topNr.getTopNr());
 							File failKoopia = new File(koodNimi + "_" + top + ".csv");
 			                if (fail != null) {
+			                	loomiseInfo.setText(" ");
+			                	tabelPaigutus.getChildren().removeAll(
+			    						info, kood, 
+			    						tulemusteInfo, tulemusteTop);
 			                	try {
 			                		TestiFailiSisu testiFailiSisu = salvestaFail(fail, failKoopia);
 			                		
@@ -300,6 +306,10 @@ public class Main extends Application {
 							        				nupualus);
 											File failitee = failKoopia.getAbsoluteFile();
 					            	    	failitee.delete();
+					            	    	loomiseInfo.setText(loomiseInfoTekst);
+						                	tabelPaigutus.getChildren().addAll(
+						    						info, kood, 
+						    						tulemusteInfo, tulemusteTop);
 							            }
 									});
 			                		
