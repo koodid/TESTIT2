@@ -13,7 +13,7 @@ Tabelis formuleerituna on sisendiks:
 - Konkreetse tulemuse "õiged" vastused kõikidele küsimustele (kujuneb tulemuse "profiil").
 - Tulemus(t)e kuvamisel esitatav lisainfo kõikide tulemuste alternatiivide kohta.
 
-[https://cloud.githubusercontent.com/assets/16835566/15314942/7197f4ae-1c1d-11e6-8c64-005bd2e7bfae.jpg9]
+![sisendtabel](https://cloud.githubusercontent.com/assets/16835566/15314942/7197f4ae-1c1d-11e6-8c64-005bd2e7bfae.jpg)
 
 Programmil on kaks poolt: testi loomine ja testi täitmine.
 ## Testi loomisel:
