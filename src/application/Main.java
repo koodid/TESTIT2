@@ -235,12 +235,13 @@ public class Main extends Application {
 							String top = Integer.toString(topNr.getTopNr());
 							File failKoopia = new File(koodNimi + "_" + top + ".csv");
 			                if (fail != null) {
-			                	loomiseInfo.setText(" ");
-			                	tabelPaigutus.getChildren().removeAll(
-			    						info, kood, 
-			    						tulemusteInfo, tulemusteTop);
 			                	try {
 			                		TestiFailiSisu testiFailiSisu = salvestaFail(fail, failKoopia);
+			                		// Juhul kui puuduvaid andmeid ei tuvastata, eemaldatakse lehelt testi loomist puudutav info.
+			                		loomiseInfo.setText(" ");
+				                	tabelPaigutus.getChildren().removeAll(
+				    						info, kood, 
+				    						tulemusteInfo, tulemusteTop);
 			                		
 			                		// Pärast faili sisestamist kuvatav info
 					        		VBox tulemusbox = new VBox();
