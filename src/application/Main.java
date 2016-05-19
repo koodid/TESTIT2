@@ -139,7 +139,8 @@ public class Main extends Application {
 				tabelPaigutus.setVgap(5);
 				tabelPaigutus.setHgap(5);
 				
-				Label info = new Label("Sisesta siia KOOD (ilma tühikuteta, vähemalt 3 tähemärki), millega jõuab vastaja Sinu testini:" +
+				Label info = new Label("Sisesta siia KOOD, millega jõuab vastaja Sinu testini. " +
+						"\n" + "Kood peab olema ilma tühikuteta, vähemalt 3 tähemärki ja ei tohi sisaldada tähemärke \\ / : * ? \" < > |" +
 						"\n" + "(Sisestatud info kinnitamiseks vajuta ENTER)");
 				TextField kood = new TextField();
 				Label kuvaKoodiInfo = new Label("Testi ligipääsukood:");
@@ -173,7 +174,12 @@ public class Main extends Application {
 				kood.setOnKeyPressed(new EventHandler<KeyEvent>() {
 				    public void handle(KeyEvent keyEvent) {
 				    	if (keyEvent.getCode() == KeyCode.ENTER) {
-				    		if ((kood.getText() != null && kood.getText().length() >= 3 && !kood.getText().isEmpty())) {
+				    		if ((kood.getText() != null && kood.getText().length() >= 3 && !kood.getText().isEmpty() &&
+				    				!kood.getText().contains("\\") && !kood.getText().contains("/") && 
+				    						!kood.getText().contains(":") && !kood.getText().contains("*") &&
+				    						!kood.getText().contains("?") && !kood.getText().contains("\"") &&
+				    						!kood.getText().contains("<") && !kood.getText().contains(">") &&
+				    						!kood.getText().contains("|"))) {
 				    			String failiKood = kood.getText();
 				    			// Kontrollitakse, kas sellise koodiga fail on ehk juba olemas.
 				    			FailiKontrollija kt = new FailiKontrollija(failiKood);
@@ -188,7 +194,8 @@ public class Main extends Application {
 					    			kuvaKood.setText(failiKood);
 				    			}
 					        } else {
-					        	kuvaKood.setText("NB! Lisa testile MIN 3 tähemärgi pikkune ligipääsukood!");
+					        	kuvaKood.setText("NB! Lisa testile MIN 3 tähemärgi pikkune ligipääsukood! " +
+					        			 "Ära kasuta tähemärke \\ / : * ? \" < > |");
 					        }
 				    	}
 				    }
